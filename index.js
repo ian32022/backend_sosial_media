@@ -35,11 +35,24 @@ app.get('/', (req, res) => {
   res.json({ success: true, message: 'Social Media API is running', data: null });
 });
 
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    message: `Endpoint ${req.method} ${req.path} tidak ditemukan`
+  });
+});
+
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).json({ success: false, message: 'Terjadi kesalahan server', data: null });
+  res.status(500).json({
+    success: false,
+    message: 'Internal server error',
+    error: process.env.NODE_ENV === 'development' ? err.message : undefined
+  });
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server berjalan di port ${PORT}`);
 });
+
+module.exports = app;

@@ -8,4 +8,13 @@ const pool = new Pool({
   }
 });
 
+pool.connect((err, client, release) => {
+  if (err) {
+    console.error('Koneksi database gagal:', err.message);
+  } else {
+    console.log('Koneksi database berhasil');
+    release();
+  }
+});
+
 module.exports = pool;
