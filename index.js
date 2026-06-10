@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', authRoutes);
 app.use('/api/profile', profileRoutes);
 app.use('/api', userRoutes);
-app.use('/api', postRoutes);
+app.use('/api/posts', postRoutes);
 app.use('/api', commentRoutes);
 app.use('/api', interactionRoutes);
 app.use('/api', followRoutes);
