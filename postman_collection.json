@@ -1,11 +1,11 @@
 {
   "info": {
     "name": "Social Media API",
-    "description": "Collection untuk testing endpoint Social Media API\n\nBase URL: https://backend-sosial-media-laj4.vercel.app\n\nCara penggunaan:\n1. Import file ini ke Postman\n2. Jalankan \"Register User Biasa\" atau \"Login\" untuk mendapat token\n3. Token otomatis tersimpan ke variable collection\n4. Jalankan endpoint lainnya secara berurutan",
+    "description": "Collection untuk testing endpoint Social Media API\n\nBase URL: https://backendsosialmedia.vercel.app/\n\nCara penggunaan:\n1. Import file ini ke Postman\n2. Jalankan \"Register User Biasa\" atau \"Login\" untuk mendapat token\n3. Token otomatis tersimpan ke variable collection\n4. Jalankan endpoint lainnya secara berurutan",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
-    { "key": "base_url", "value": "https://backend-sosial-media-laj4.vercel.app" },
+    { "key": "base_url", "value": "https://backendsosialmedia.vercel.app/" },
     { "key": "token", "value": "" },
     { "key": "post_id", "value": "" },
     { "key": "comment_id", "value": "" },
